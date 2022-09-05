@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="animate__animated animate__zoomIn">
+    <ion-item lines="full">
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input #txtUsuario type="text" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input #txtPassword type="password" required></ion-input>
+    </ion-item>
+      <ion-radio-group 
+      [(ngModel)]="selectedValue">
+        <ion-list>
+            <ion-item>
+            <ion-label>Tengo vehiculo</ion-label>
+              <ion-radio slot="end" value="si"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>No tengo vehiculo</ion-label>
+              <ion-radio slot="end" value="no"></ion-radio>
+            </ion-item>
+        </ion-list>
+      </ion-radio-group>
+    <ion-item lines="full">
+      <ion-label position="floating">Cant° de pasajeros:</ion-label>
+      <ion-input #txtPasajeros type="text"></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col class="action-button ion-padding">
+        <ion-button class="login-button" color="danger" expand="full" (click)="guardar(txtUsuario,txtPassword,txtPasajeros)">Registrarse</ion-button>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

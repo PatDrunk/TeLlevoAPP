@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Te Llevo APP</ion-title>
+  </ion-toolbar>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <img src="https://previews.123rf.com/images/passengerz/passengerz2105/passengerz210500013/169101903-pequeño-coche-retro-amarillo-divertido-con-los-ojos.jpg?fj=1" class="avatar">
+  <ion-grid>
+    <ion-row class="animate__animated animate__lightSpeedInRight">
+      <ion-col align-self-center>
+        <ion-button [routerLink]="['/registro']" expand="block" color="primary">Registro</ion-button>
+        <ion-button [routerLink]="['/login']" expand="block" color="danger">Login</ion-button>
+        <ion-button [routerLink]="['/conductor']" expand="block" color="danger">Conductores</ion-button>
+        <ion-button [routerLink]="['/login']" expand="block" color="danger">Pasajeros</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-list>
+      <ion-item *ngFor="let aux of usuarios">
+      <ion-card-header>
+        <ion-card-subtitle> {{ aux.usuario }}</ion-card-subtitle>
+        <ion-card-title>{{ aux.id }}</ion-card-title>
+        <ion-card-title>{{ aux.activo }}</ion-card-title>
+        <ion-card-title>{{ aux.pasajeros }}</ion-card-title>
+      </ion-card-header>
+    </ion-item>
+    </ion-list>
+  </ion-grid>
+</ion-content>
