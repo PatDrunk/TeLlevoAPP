@@ -1,10 +1,6 @@
-ion-content {
-    background: #277BC0;
-  }
+.login-section {
   
-  .login-section {
-  
-    height: 105vh;
+    height: 100vh;
     width: 100%;
     max-width: 500px;
     background: #0F3460;
@@ -17,18 +13,19 @@ ion-content {
     border-top-right-radius: 46px;
   
     .heading {
-      margin-top: 20px;
+      margin-top: 40px;
   
       h1 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         font-weight: bolder;
+        color: white;
       }
   
       p {
   
         margin-top: 20px;
         font-size: 1rem;
-        color: #b5b3b3;
+        color: #a8a8a8;
   
       }
     }
@@ -52,7 +49,7 @@ ion-content {
           }
   
           ion-label {
-            position: absolute;
+            position: static;
             margin-left: 35px;
             font-weight: bolder;
             font-size: 0.8rem;
@@ -63,7 +60,7 @@ ion-content {
             font-size: 0.9rem;
             --padding-start: 36px;
             --pading-top: 36px;
-            color: #7b7b7b;
+            color: #fff4f4;
           }
   
         }
@@ -81,6 +78,10 @@ ion-content {
           margin-top: 15px;
           font-size: 1rem;
           color: #b5b3b3;
+        }
+
+        a{
+          color: #FFCB42;
         }
       }
     }
