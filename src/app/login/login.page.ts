@@ -1,3 +1,4 @@
+import { FirebaseService } from './../services/firebase.service';
 import { Router } from '@angular/router';
 import { Usuario } from './../interface/usuarios';
 import { RegistroService } from './../registro/registro.service';
@@ -12,12 +13,12 @@ import Swal from 'sweetalert2';
 export class LoginPage implements OnInit {
 
   usuario:Usuario
-  constructor(private servicio: RegistroService, private router: Router) { }
+  constructor(private fire: FirebaseService, private servicio: RegistroService, private router: Router) { }
 
   ngOnInit() {
   }
   
-  login(txtUser,txtPass){
+  /*login(txtUser,txtPass){
     this.usuario = this.servicio.obtenerUsuario(txtUser.value,txtPass.value)
     if (this.usuario.usuario === txtUser.value && this.usuario.usuario === txtPass.value) {
       this.router.navigate(['/opcion'])
@@ -30,5 +31,12 @@ export class LoginPage implements OnInit {
       
     }
     
+  }*/
+
+  async login(email, pass){
+    const user = this.fire.login(email.value,pass.value);
+    if (user) {
+      this.router.navigate(['/opcion'])
+    }
   }
 }
