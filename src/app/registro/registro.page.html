@@ -16,8 +16,9 @@
       <p>Complete los campos para crear su cuenta</p>
     </div>
 
-    <div class="animate__animated animate__zoomIn">
-      <div class="register-form ion-padding">
+<ion-content [fullscreen]="true">
+  <div class="animate__animated animate__zoomIn">
+    <div class="register-form ion-padding">
         <div class="form-input ion-padding">
           <ion-item>
             <ion-label position="floating">Usuario</ion-label>
@@ -28,6 +29,12 @@
           <ion-item>
             <ion-label position="floating">Contraseña</ion-label>
             <ion-input #txtPassword type="password" required></ion-input>
+          </ion-item>
+        </div>
+        <div class="form-input ion-padding">
+          <ion-item>
+            <ion-label position="floating">Correo</ion-label>
+            <ion-input #txtEmail type="email" required></ion-input>
           </ion-item>
         </div>
         <div class="radio-group">
@@ -51,8 +58,8 @@
         </div>
       </div>
       <div class="action-button ion-padding">
-        <ion-button size="large" class="register-button" (click)="guardar(txtUsuario,txtPassword,txtPasajeros)">Registrarse</ion-button>
+        <ion-button size="large" class="register-button" (click)="registrar(txtEmail,txtPassword);guardar(txtUsuario,txtPassword,txtPasajeros)">Registrarse</ion-button>
       </div>
+    </div>
   </div>
-</div>
 </ion-content>

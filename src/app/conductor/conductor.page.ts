@@ -21,7 +21,7 @@ export class ConductorPage implements OnInit {
   }
 
   viajeIniciado(txtActual,txtDestino){
-    this.servicio.agregarViaje('pedro',txtActual.value,txtDestino.value,this.hora)
+    this.servicio.agregarViaje(this.viaje.length+1+'','pedro',txtActual.value,txtDestino.value,this.hora)
     Swal.fire({
       icon: 'success',
       title: 'Hemos comenzado nuestro Viaje!',

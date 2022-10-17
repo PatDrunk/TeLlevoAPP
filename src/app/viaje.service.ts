@@ -8,6 +8,7 @@ export class ViajeService {
 
   public viaje : Viaje [] = [
     {
+      ID: '1',
       nombre_usuario : 'Pedro',
       desde: 'Santiago',
       hasta: 'Buin',
@@ -29,9 +30,9 @@ export class ViajeService {
     }
   }
 
-  agregarViaje(nombre_usuario: string,desde: string,hasta: string,hora_viaje: string){
+  agregarViaje(ID: string, nombre_usuario: string,desde: string,hasta: string,hora_viaje: string){
     this.viaje.push({
-      nombre_usuario,desde,hasta,hora_viaje
+      ID,nombre_usuario,desde,hasta,hora_viaje
     })
 
   }
